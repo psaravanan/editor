@@ -16,6 +16,9 @@
 //= require_tree .
 
 tinyMCE.init({
+		mode: "specific_textareas",
+		editor_selector : "tinymce_text",
+		content_css: "/assets/custom_content.css",
 		theme : "advanced",
 		plugins: "table",
     style_formats : [
@@ -24,6 +27,7 @@ tinyMCE.init({
         {title : 'Red header', block : 'h1', styles : {color : '#ff0000'}},
         {title : 'Example 1', inline : 'span', classes : 'example1'},
         {title : 'Example 2', inline : 'span', classes : 'example2'},
+				{title : 'TXB Header', inline: 'span', classes: 'txb_header'},
         {title : 'Table styles'},
         {title : 'Table row 1', selector : 'tr', classes : 'tablerow1'}
     ]

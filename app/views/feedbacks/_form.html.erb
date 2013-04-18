@@ -1,10 +1,10 @@
-<%= form_for(@contact_u) do |f| %>
-  <% if @contact_u.errors.any? %>
+<%= form_for(@feedback) do |f| %>
+  <% if @feedback.errors.any? %>
     <div id="error_explanation">
-      <h2><%= pluralize(@contact_u.errors.count, "error") %> prohibited this contact_u from being saved:</h2>
+      <h2><%= pluralize(@feedback.errors.count, "error") %> prohibited this feedback from being saved:</h2>
 
       <ul>
-      <% @contact_u.errors.full_messages.each do |msg| %>
+      <% @feedback.errors.full_messages.each do |msg| %>
         <li><%= msg %></li>
       <% end %>
       </ul>
@@ -21,11 +21,13 @@
   </div>
   <div class="field">
     <%= f.label :content %><br />
-    <%= f.text_area :content, :class=> "tinymce_text", :rows => 20, :cols => 30 %>
+    <%= f.text_area :content %>
+  </div>
+  <div class="field">
+    <%= f.label :user_id %><br />
+    <%= f.number_field :user_id %>
   </div>
   <div class="actions">
     <%= f.submit %>
   </div>
 <% end %>
-
-<%= tinymce %>

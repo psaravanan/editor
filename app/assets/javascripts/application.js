@@ -21,6 +21,7 @@ tinyMCE.init({
 		content_css: "/assets/custom_content.css",
 		theme : "advanced",
 		plugins: "table",
+		gecko_spellcheck: true,
     style_formats : [
         {title : 'Bold text', inline : 'b'},
         {title : 'Red text', inline : 'span', styles : {color : '#ff0000'}},

@@ -14,7 +14,7 @@
   <tr>
     <td><%= contact_u.name %></td>
     <td><%= contact_u.email %></td>
-    <td><%= contact_u.content %></td>
+    <td><%=raw contact_u.content %></td>
     <td><%= link_to 'Show', contact_u %></td>
     <td><%= link_to 'Edit', edit_contact_u_path(contact_u) %></td>
     <td><%= link_to 'Destroy', contact_u, method: :delete, data: { confirm: 'Are you sure?' } %></td>

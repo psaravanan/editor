@@ -13,7 +13,9 @@ class ContactUsController < ApplicationController
   # GET /contact_us/1
   # GET /contact_us/1.json
   def show
+    p "==========================="
     @contact_u = ContactU.find(params[:id])
+    p "============================"
 
     respond_to do |format|
       format.html # show.html.erb
